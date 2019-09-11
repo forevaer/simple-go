@@ -2,17 +2,12 @@ package main
 
 import (
 	"fmt"
+	"learn_reflect/person"
 	"reflect"
 )
 
-type Person struct {
-	Name   string
-	Age    int
-	Gender string
-}
-
 func main() {
-	p := Person{"godme", 99, "male"}
+	p := person.NewPerson("godme", "male", 99)
 	// type
 	t := reflect.TypeOf(p)
 	// value

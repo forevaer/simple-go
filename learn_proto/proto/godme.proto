@@ -1,0 +1,14 @@
+syntax = "proto3";
+package rpc;
+
+message Request {
+    int32 id = 1;
+}
+
+message Response {
+    string name = 1;
+}
+
+service Management{
+    rpc QueryById(Request) returns (Response) {}
+}
